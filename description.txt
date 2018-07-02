@@ -1,0 +1,18 @@
+CS 579 Assignment 4
+
+In this assignment, I've used TwitterAPI to collect twitter users and tweets for clustering and sentiment analysis. There are four python scripts, collect.py, cluster.py, classify.py and summarize.py. 
+
+I've collected 100 tweets for sundarpichai in collect.py
+
+cluster.py is to divide the initial four users and their friends into different communities. I've used Girvan_Newman algorithm with betweenness of each edge, but I also got 3 single users as one clusters. These users are considered as outliers and we only consider clusters with more than one user.
+
+classify.py use afinn method to classify the sentiment of each tweet. Tweets with positive scores are classified as positive tweets, negative scores as negative tweets and zero score as neutral tweets.
+
+summarize.py writes the output into summary.txt.
+
+Conclusions:
+
+I wanted to know Sundar Pichai who's the CEO of Google follows people outside his style of work. I was amazed to see some of the people were Steph Curry, Virat Kohli who's an Indian Cricketer and Kevin Durant. He's a sport follower.
+I've collected just 100 tweets but I've got a descent intuition into how people react to google products lately.
+
+For sentiment analysis the 100 tweets are clustered into three instances using AFINN method - Positive with positive scores, negative with negative scores and neutral with zero scores. I see more of neutral and positive tweets for sundar pichai more than negative. So he's doing good in the industry right now. Afinn is a very basic approach for sentiment analysis but this simple approach giving good results made me understand I should even try Machine Learning methods, training set and test data to improve data analysis.
